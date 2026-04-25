@@ -63,53 +63,6 @@
         .contact a {
             color: #7C3AED;
             text-decoration: none;
-        }
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 12px;
-        }
-        .contact input,
-        .contact textarea {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(124, 58, 237, 0.3);
-            border-radius: 10px;
-            padding: 12px 14px;
-            color: #e0e0e0;
-            font-size: 14px;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .contact input:focus,
-        .contact textarea:focus {
-            border-color: #7C3AED;
-        }
-        .contact textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-        .contact button {
-            background: linear-gradient(135deg, #7C3AED, #06B6D4);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 12px;
-            font-size: 15px;
-            font-weight: 600;
-            font-family: inherit;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        .contact button:hover {
-            opacity: 0.9;
-        }
-        .form-success {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            color: #06B6D4;
             font-weight: 600;
         }
         .en {
@@ -142,12 +95,12 @@
         <h2>المشتريات داخل التطبيق</h2>
         <p>يقدم التطبيق اشتراكات وباقات ألعاب عبر Apple. تتم معالجة جميع عمليات الشراء بواسطة Apple ولا نحصل على معلومات الدفع الخاصة بك.</p>
         <ul>
-            <li>اشتراك أسبوعي وشهري للألعاب غير المحدودة</li>
-            <li>باقات ألعاب (10 أو 20 لعبة)</li>
+            <li>اشتراك شهري وسنوي للألعاب غير المحدودة (يتجدد تلقائيًا عبر Apple)</li>
+            <li>باقات ألعاب (10 أو 20 لعبة) – دفعة واحدة</li>
         </ul>
 
         <h2>تخزين البيانات</h2>
-        <p>جميع البيانات تُخزن محليًا على جهازك باستخدام UserDefaults وملفات JSON. لا نستخدم أي خوادم سحابية أو قواعد بيانات خارجية.</p>
+        <p>جميع بيانات اللعبة تُخزن محليًا على جهازك. لا نستخدم أي خوادم سحابية أو قواعد بيانات خارجية لمعلوماتك الشخصية. قد يستخدم التطبيق خدمة iCloud من Apple لمزامنة رصيد المشتريات بين أجهزتك المرتبطة بنفس حساب Apple.</p>
 
         <h2>خدمات الطرف الثالث</h2>
         <p>التطبيق لا يستخدم أي خدمات تتبع أو تحليلات أو إعلانات من طرف ثالث.</p>
@@ -163,17 +116,8 @@
 
         <div class="contact">
             <h2>تواصل معنا</h2>
-            <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية، يمكنك التواصل معنا:</p>
-            <form action="#" method="POST" id="contact-form-ar">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://bosoud.com/geem-privacy/">
-                <input type="hidden" name="_subject" value="Geem - رسالة جديدة">
-                <input type="text" name="name" placeholder="الاسم" required>
-                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                <textarea name="message" placeholder="رسالتك..." required></textarea>
-                <button type="submit">إرسال</button>
-            </form>
-            <div class="form-success" id="success-ar">تم إرسال رسالتك بنجاح! ✓</div>
+            <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية، تواصل معنا عبر البريد الإلكتروني:</p>
+            <p><a href="mailto:bosoud@bosoud.com?subject=Geem%20Privacy">bosoud@bosoud.com</a></p>
         </div>
 
         <!-- English -->
@@ -190,12 +134,12 @@
             <h2>In-App Purchases</h2>
             <p>The app offers subscriptions and game packs through Apple. All purchases are processed by Apple and we do not receive your payment information.</p>
             <ul>
-                <li>Weekly and monthly subscriptions for unlimited games</li>
-                <li>Game packs (10 or 20 games)</li>
+                <li>Monthly and yearly subscriptions for unlimited games (auto-renew through Apple)</li>
+                <li>Game packs (10 or 20 games) – one-time purchase</li>
             </ul>
 
             <h2>Data Storage</h2>
-            <p>All data is stored locally on your device using UserDefaults and JSON files. We do not use any cloud servers or external databases.</p>
+            <p>All game data is stored locally on your device. We do not use any cloud servers or external databases for your personal information. The app may use Apple's iCloud to sync your purchase credits across devices signed into the same Apple ID.</p>
 
             <h2>Third-Party Services</h2>
             <p>The app does not use any third-party tracking, analytics, or advertising services.</p>
@@ -211,40 +155,12 @@
 
             <div class="contact">
                 <h2>Contact Us</h2>
-                <p>If you have any questions about this privacy policy, feel free to reach out:</p>
-                <form action="#" method="POST" id="contact-form-en">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://bosoud.com/geem-privacy/">
-                    <input type="hidden" name="_subject" value="Geem - New Message">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Your message..." required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-                <div class="form-success" id="success-en">Message sent successfully! ✓</div>
+                <p>If you have any questions about this privacy policy, contact us by email:</p>
+                <p><a href="mailto:bosoud@bosoud.com?subject=Geem%20Privacy">bosoud@bosoud.com</a></p>
             </div>
         </div>
 
-        <p class="date">آخر تحديث: فبراير 2026 | Last updated: February 2026</p>
+        <p class="date">آخر تحديث: أبريل 2026 | Last updated: April 2026</p>
     </div>
-    <script>
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const data = new FormData(form);
-                try {
-                    await fetch(form.action, {
-                        method: 'POST',
-                        body: data,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    form.style.display = 'none';
-                    form.nextElementSibling.style.display = 'block';
-                } catch {
-                    form.submit();
-                }
-            });
-        });
-    </script>
 </body>
 </html>
